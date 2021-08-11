@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_complaint_box_outer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_complaint_box_inner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_complaint_details_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/tv_complaint_details_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/tv_complaint_details_submitted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/tv_complaint_details_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/tv_complaint_details_updated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="5dp"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+    </LinearLayout>
+
+</LinearLayout>

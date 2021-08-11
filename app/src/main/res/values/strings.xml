@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">CCMS Android</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_conf_password">Confirm Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be at least 5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- Strings related to menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_about">About</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_complaints_history">All Complaints</string>
+    <!-- Strings related to main -->
+    <string name="prompt_register">Register</string>
+    <string name="prompt_login">LogIn</string>
+    <string name="submit_complaint">Submit Complaint</string>
+    <string name="prompt_complaints">How can we help you? &#8230;</string>
+    <string name="about_app">
+        Android client of City Complaints Management System.\n
+        \nThis is a component of the project attempted for PGDIT degree at Institute of Information Technology, University of Dhaka\n
+        by Md. Ashraful Haq Rahat, Roll:2003.\n
+    </string>
+    <string name="about_link">\nSource code of this app is available at:
+        \nhttps://github.com/MAHRahat/CCMS-Android/</string>
+    <string name="str_update_profile">Update Profile</string>
+    <string name="pro_id">User ID</string>
+    <string name="pro_email">Email</string>
+    <string name="pro_name">Name</string>
+    <string name="pro_update">Update Profile</string>
+    <string name="prompt_change_pass">Change Password</string>
+    <string name="prompt_pass_old">Enter Old Password</string>
+    <string name="prompt_pass_new1">Enter new password</string>
+    <string name="prompt_pass_new2">Confirm new password</string>
+    <string name="prompt_update_pass">Update Password</string>
+    <string name="pro_address">Address</string>
+</resources>
