@@ -34,7 +34,7 @@ public class HomeActivity extends OptionsMenuActivity {
 
     private final String TAG = "Home Activity";
 
-    private EditText etComplaint;
+    private EditText etComplaint, etLocation;
     private Button btnSubmitComplaint;
     private String complaintURL;
 
@@ -59,6 +59,7 @@ public class HomeActivity extends OptionsMenuActivity {
 
     private void initUI() {
         etComplaint = findViewById(R.id.et_complaint);
+        etLocation = findViewById(R.id.et_location);
         btnSubmitComplaint = findViewById(R.id.submit_complaint);
     }
 
@@ -67,11 +68,15 @@ public class HomeActivity extends OptionsMenuActivity {
             @Override
             public void onClick(View v) {
                 String complaintText = etComplaint.getText().toString().trim();
+                String locationText = etLocation.getText().toString().trim();
+                if (locationText.isEmpty()) {
+                    etLocation.getText().clear();
+                }
                 if (complaintText.isEmpty()) {
                     showLongToast(getApplicationContext(), "Can not submit empty complaint!");
                     etComplaint.getText().clear();
                 } else {
-                    tryToSubmitComplaint(complaintText);
+                    tryToSubmitComplaint(complaintText, locationText);
                 }
             }
         });
@@ -82,7 +87,7 @@ public class HomeActivity extends OptionsMenuActivity {
      *
      * @param complaintText The details of the complaint.
      */
-    private void tryToSubmitComplaint(String complaintText) {
+    private void tryToSubmitComplaint(String complaintText, String locationText) {
         complaintURL = SERVER_URL + EP_CREATE_COMPLAINT;
         final HashMap<String, String> complaintHeader = new HashMap<>();
         final HashMap<String, String> complaintData = new HashMap<>();
@@ -92,6 +97,7 @@ public class HomeActivity extends OptionsMenuActivity {
         complaintData.put("category_id", String.valueOf(1));
         complaintData.put("citizen_id", dbHelper.readValueOfKee("id"));
         complaintData.put("status", "Submitted");
+        complaintData.put("location", locationText);
         JSONObject complaintJSON = new JSONObject(complaintData);
         RequestQueue requestQueue = VRQSingleton.getInstance(this.getApplicationContext()).getRequestQueue();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -101,7 +107,9 @@ public class HomeActivity extends OptionsMenuActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        etLocation.getText().clear();
                         etComplaint.getText().clear();
+                        etComplaint.findFocus();
                         Log.d(TAG, response.toString());
                     }
                 },

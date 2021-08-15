@@ -40,4 +40,5 @@
     <string name="prompt_pass_new2">Confirm new password</string>
     <string name="prompt_update_pass">Update Password</string>
     <string name="pro_address">Address</string>
+    <string name="prompt_location">Location</string>
 </resources>
