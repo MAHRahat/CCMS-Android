@@ -10,10 +10,13 @@ The system has three parts:
   
 The citizens submit complaints via Android app. The complaints are categorized and stored in the server. The employees of the city authority can view the complaints using desktop software and take necessary actions.  
   
-### Supervisor:
+### Supervisor :
 *Dr. Mohammad Shoyaib*, Professor  
   
-### Student:
+### Co-Supervisor :
+*Dr. Ahmedul Kabir*, Assistant Professor  
+  
+### Student :
 *Md. Ashraful Haq Rahat*, Roll:2003, PGDIT 20th batch  
 
 ### Institution:
